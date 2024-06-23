@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Background color for the body */
+    font-family: Arial, sans-serif; /* Use a common font for readability */
+}
+
+.game-container {
+    width: 100%;
+    max-width: 1000px; /* Limit maximum width */
+    height: 100%;
+    background-color: white; /* Background color for the game container */
+    border: 2px solid #ccc; /* Border for the game container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect for the game container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the total width/height */
+}
+
+.game-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the game title */
+    color: black; /* Change title color to green */
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px; /* Adjust scoreboard width for smaller screens */
+    margin-bottom: 20px;
+    font-size: 16px; /* Adjust font size for readability */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px; /* Limit card container width */
+    height: 60vh; /* Adjust height as needed */
+    overflow: auto; /* Enable scrolling if cards exceed container height */
+}
+
+.card {
+    width: calc(20% - 10px); /* Adjust card width based on container width */
+    max-width: 150px; /* Limit maximum card width */
+    height: 120px; /* Adjust card height for mobile */
+    background-size: cover; /* Ensure the background image covers the entire card */
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 1px solid transparent; /* Transparent border initially */
+}
+
+#tick {
+    display: none;
+    margin-top: 10px;
+    width: 50px; /* Adjust the size as needed */
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(33.33% - 10px); /* Adjust card width for smaller screens */
+        max-width: 120px; /* Adjust maximum card width */
+        height: 100px; /* Adjust card height for smaller screens */
+    }
+}
